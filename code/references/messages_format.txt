@@ -1,0 +1,55 @@
+Message Formats
+~~~~~~~~~~~~~~~
+
+1. Request message
+REQn MessageId frm_IP Power Duration to_IP through_IP Port
+
+2. Forward message
+REQn MessageId frm_IP Power Duration to_IP through_IP Port
+
+3. Acknowledgement for request
+ACKREQn MessageId frm_IP
+
+4. Availability message
+AVL messageId TARRIF DURATION POWER FROM_IP PORTS
+
+5. Non availability message
+NAVL messageId FROM_IP
+
+6. Start message
+SRT MessageId Power frm_IP to_IP time Port_list
+
+7. Acknowledgement for start
+ACKSRT MessageId frm_IP
+
+8. Stop message
+STP MessageId Power frm_IP to_IP Port_list
+
+9. Acknowledgement for stop
+ACKSTP MessageId frm_IP
+
+
+MESSAGE BOARDS
+~~~~~~~~~~~~~~
+MESSAGE_BOARD, NEW_MESSAGE
+REQ_BOARD, NEW_REQ
+FWD_BOARD, NEW_FWD
+ACK_REQ_BOARD, NEW_ACKREQ
+ACK_REQ_BOARD_H
+ACK_SRT_BOARD, NEW_ACKSRT
+ACK_SRT_BOARD_H
+ACK_STP_BOARD, NEW_ACKSTP
+ACK_STP_BOARD_H
+AVL_BOARD, NEW_AVL
+AVL_BOARD_H
+NAVL_BOARD, NEW_NAVL
+SRT_BOARD, NEW_SRT
+SRT_BOARD_H
+STP_BOARD, NEW_STP
+STP_BOARD_H
+ACK_BOARD, NEW_ACK
+
+
+
+
+

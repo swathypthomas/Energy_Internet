@@ -1,0 +1,17 @@
+Dependencies
+~~~~~~~~~~~~
+redis-6.0.4
+redis-server
+redis-client
+python3
+python3-pip
+gcc
+expect
+arp-scan
+libevent-dev
+telnet
+PySimpleGUI
+networkx
+PrettyTable  //now removed. tkintertable is used now. changed to sg.Table with PySimpleGUI
+matplotlib  //is it needed in final GUI ?
+numpy

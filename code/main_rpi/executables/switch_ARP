@@ -1,0 +1,30 @@
+#!/usr/bin/expect
+
+#If it all goes pear shaped the script will timeout after 20 seconds.
+log_user 0
+set switch_address [lindex $argv 0];
+set timeout 20
+#suppress terminal echos
+#log_user 0
+#This spawns the telnet program and connects it to the variable name
+spawn telnet $switch_address
+#spawn telnet 192.168.0.40
+#The script expects login
+expect "DGS-1210-10P login: " 
+#The script sends the user variable
+send "admin\n"
+#The script expects Password
+expect "Password: "
+#The script sends the password variable
+send "admin\n"
+expect "DGS-1210-10P> "
+#log_file -noappend info.log
+#log_user 1
+send "debug info\n"
+expect "DGS-1210-10P> "
+set outcome $expect_out(buffer)
+send "logout\n"
+#log_user 1
+send "\n"
+set output [open "info.log" "a+"]
+puts $output $outcome

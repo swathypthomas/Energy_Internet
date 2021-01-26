@@ -1,0 +1,10 @@
+1. If power transfer is in progress and
+the line is disconnected, intermediate routers have
+to update the inPower and outPower values 
+through corresponding ports
+
+2. After sense_disconnect a push has to be made for SOC_IN to check SOC status 
+
+3. retransmission bypassed
+
+4. hardcoded SOC value in srtstp_transfer.c(for requesting ER) and stp_process.c(for giving ER)
